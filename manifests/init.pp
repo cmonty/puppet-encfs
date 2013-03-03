@@ -8,6 +8,6 @@ class encfs {
   }
 
   exec { "sudo chmod +s /Library/Extensions/fuse4x.kext/Support/load_fuse4x":
-    require => Package["enfs"]
+    require => Package["encfs"]
   }
 }
