@@ -17,7 +17,7 @@ class encfs {
     require => Package["encfs"],
   }
 
-  exec { "sudo chmod +s /Library/Extensions/fuse4x.kext/Support/load_fuse4x":
+  exec { "sudo /bin/chmod +s /Library/Extensions/fuse4x.kext/Support/load_fuse4x":
     require => Package["encfs"]
   }
 }
