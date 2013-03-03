@@ -1,4 +1,4 @@
-class enfcs {
+class encfs {
   include homebrew
 
   package { "encfs": }
