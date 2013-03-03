@@ -20,6 +20,7 @@ class encfs {
   }
 
   exec { "sudo /bin/chmod +s /Library/Extensions/fuse4x.kext/Support/load_fuse4x":
-    require => Exec["copy-fuse4x"]
+    unless => "ls -l /Library/Extensions/fuse4x.kext/Support/load_fuse4x | cut -d' ' -f 1 | grep 's' 2>/dev/null",
+    require => Package["encfs"]
   }
 }
